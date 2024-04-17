@@ -1,4 +1,8 @@
 function greet(name, language) {
+
+  var currentHour = new Date().getHours();
+  var timeOfDay = currentHour < 12 ? "morning" : currentHour < 18 ? "afternoon" : "evening";
+
   var greeting = "Hello";
   if (language === "es") {
       greeting = "Hola";
@@ -6,6 +10,8 @@ function greet(name, language) {
       greeting = "Bonjour";
   }
   console.log(greeting + ", " + name + "!");
+  console.log("Good " + timeOfDay + ", " + name + "!");
+
 }
 
 greet("World", "es");
